@@ -5,4 +5,5 @@
 
 `brain-even` https://asciinema.org/a/585704  
 `brain-calc` https://asciinema.org/a/585982  
-`brain-gcd` https://asciinema.org/a/586049
+`brain-gcd` https://asciinema.org/a/586049  
+`brain-progression` https://asciinema.org/a/586180

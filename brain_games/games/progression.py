@@ -1,7 +1,10 @@
 from random import randint
 
 
-def progression_layout():
+RULES_DESCRIPTION = "What number is missing in the progression?"
+
+
+def progression():
     number = randint(1, 20)
     step = randint(1, 5)
     length = randint(5, 10)

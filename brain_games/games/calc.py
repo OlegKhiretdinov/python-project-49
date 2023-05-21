@@ -1,7 +1,10 @@
 from random import randint, choice
 
 
-def calc_layout():
+RULES_DESCRIPTION = "What is the result of the expression?"
+
+
+def calc():
     operators = ["+", "-", "*"]
     number1 = randint(0, 10)
     number2 = randint(0, 10)

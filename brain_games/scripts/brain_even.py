@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.layout.main_layout import main_layout
-from brain_games.layout.even_layout import even_layout
+from brain_games.games.main_wrapper import main_wrapper
+from brain_games.games.even import even, RULES_DESCRIPTION
 
 
 def main():
-    welcome_txt = 'Answer "yes" if the number is even, otherwise answer "no".'
-    main_layout(welcome_txt, even_layout)
+    main_wrapper(RULES_DESCRIPTION, even)
 
 
 if __name__ == '__main__':

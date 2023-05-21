@@ -2,7 +2,7 @@ from brain_games.cli import welcome_user, get_answer_for_question
 from brain_games.utils.utils import get_is_answer_correct, finish_game
 
 
-def main_layout(welcome_txt, round_layout):
+def main_wrapper(welcome_txt, round_layout):
     name = welcome_user()
     print(welcome_txt)
 

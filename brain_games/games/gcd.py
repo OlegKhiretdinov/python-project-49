@@ -4,7 +4,7 @@ from random import randint
 RULES_DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
-def gcd():
+def get_round_data():
     number_1 = randint(1, 100)
     number_2 = randint(1, 100)
     correct_answer = None

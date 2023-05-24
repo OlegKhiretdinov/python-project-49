@@ -4,7 +4,7 @@ from random import randint
 RULES_DESCRIPTION = "What number is missing in the progression?"
 
 
-def progression():
+def get_round_data():
     number = randint(1, 20)
     step = randint(1, 5)
     length = randint(5, 10)

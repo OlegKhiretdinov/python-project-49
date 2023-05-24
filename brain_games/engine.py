@@ -4,12 +4,12 @@ from brain_games.cli import welcome_user, get_answer_for_question
 ROUND_COUNT = 3
 
 
-def engine(game_description, round):
+def engine(game):
     name = welcome_user()
-    print(game_description)
+    print(game.RULES_DESCRIPTION)
 
     for _ in range(ROUND_COUNT):
-        (correct_answer, question) = round()
+        (correct_answer, question) = game.get_round_data()
         user_answer = get_answer_for_question(question)
         if user_answer == str(correct_answer):
             print("Correct!")

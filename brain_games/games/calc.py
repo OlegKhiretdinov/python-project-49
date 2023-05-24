@@ -4,7 +4,7 @@ from random import randint, choice
 RULES_DESCRIPTION = "What is the result of the expression?"
 
 
-def calc():
+def get_round_data():
     operators = ["+", "-", "*"]
     number1 = randint(0, 10)
     number2 = randint(0, 10)

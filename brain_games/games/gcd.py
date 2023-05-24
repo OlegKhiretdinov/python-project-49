@@ -4,11 +4,8 @@ from random import randint
 RULES_DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
-def get_round_data():
-    number_1 = randint(1, 100)
-    number_2 = randint(1, 100)
+def get_gcd(number_1, number_2):
     correct_answer = None
-
     start = number_1 if number_1 < number_2 else number_2
 
     while not correct_answer:
@@ -16,5 +13,11 @@ def get_round_data():
             correct_answer = start
         else:
             start -= 1
+    return correct_answer
 
-    return (correct_answer, f'{number_1} {number_2}')
+
+def get_round_data():
+    number_1 = randint(1, 100)
+    number_2 = randint(1, 100)
+
+    return (get_gcd(number_1, number_2), f'{number_1} {number_2}')

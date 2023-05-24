@@ -1,5 +1,4 @@
 from brain_games.cli import welcome_user, get_answer_for_question
-from brain_games.utils.utils import get_is_answer_correct, finish_game
 
 
 def engine(welcome_txt, round):
@@ -12,11 +11,15 @@ def engine(welcome_txt, round):
     while win_count < 3 and loose_count < 1:
         (correct_answer, question) = round()
         user_answer = get_answer_for_question(question)
-        is_correct = get_is_answer_correct(user_answer, str(correct_answer))
-
-        if is_correct:
+        if user_answer == str(correct_answer):
+            print("Correct!")
             win_count += 1
         else:
+            print(f'\'{user_answer}\' is wrong answer ;('
+                  f'. Correct answer was \'{correct_answer}\'.')
             loose_count += 1
 
-    finish_game(win_count == 3, name)
+    if win_count == 3:
+        print(f'Congratulations, {name}!')
+    else:
+        print(f'Let\'s try again, {name}!')
